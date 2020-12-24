@@ -1,105 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 150vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(17, 8, 56, 0.7), rgba(49, 47, 49, 0.7)), url("https://images.pexels.com/photos/3156660/pexels-photo-3156660.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: honeydew;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
-#container{
-    width: 70%;
-    /* height: 80vh; */
-    height: auto;
-    margin: auto;
-    border: 1px solid black;
-    text-align: center;
-    box-shadow: 3px 3px 12px  rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    border: none;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(17, 8, 56, 0.7), rgba(49, 47, 49, 0.7)),
+    url("https://images.pexels.com/photos/3156660/pexels-photo-3156660.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: honeydew;
+  transition: all ease 0.3s;
 }
-#details h1{
-    font-size: 25px;
-    padding: 10px;
-    letter-spacing: 4px;
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif
+#container {
+  width: 90%;
+  max-width: 700px;
+  /* height: 80vh; */
+  height: auto;
+  margin: 2em auto;
+  border: 1px solid black;
+  text-align: center;
+  box-shadow: 3px 3px 12px rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border: none;
 }
-#details p{
-    padding: 10px;
-    text-align: left;
-    padding-bottom: 0px;
-    font-size: 17px;
-    text-transform: capitalize;
-    font-family: 'Roboto', sans-serif;
+h1 {
+  font-size: 2.5rem;
+  padding: 0.5em;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
 }
-input, button{
-    display: block;
+p {
+  padding: 0em 1.2em;
+  text-align: left;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
 }
-#text{
-    width: 60%;
-    height: 60px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    margin: auto;
+input,
+button {
+  display: block;
 }
-#btn{
-    min-width: 30%;
-    padding: 8px;
-    margin: auto;
-    background-color: indigo;
-    border: none;
-    margin-top: 10px;
-    color: whitesmoke;
-    font-weight: 500;
+#text {
+  width: 50%;
+  height: auto;
+  padding: 1.3em;
+  border-radius: 8px;
+  border: none;
+  margin: auto;
 }
-#btn:hover{
-    background-color: teal;
-    transition: all ease 0.6s;
+#btn {
+  width: 30%;
+  padding: 1em;
+  margin: 1em auto 0em;
+  background-color: indigo;
+  border: none;
+  color: whitesmoke;
+  font-weight: 500;
 }
-.result{
-    height: auto;
-    width: auto;
-    margin: auto;
-    margin-top: 15px;
-    background-color: #457b9d;
-    opacity: 0.8;
-    word-spacing: 1px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    border-radius: 2px;
-    padding: 10px;
-    font-size: 13px;
-    font-family: 'Open Sans', sans-serif;
+#btn:hover {
+  background-color: teal;
+  transition: all ease 0.6s;
+  font-weight: 700;
+}
+#result {
+  display: block;
+  width: 90%;
+  margin: 0em auto;
+  font-size: 1.4rem;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 1em;
+  /* overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto; */
 }
 @media only screen and (min-width: 600px){
-    body{
-      height: 100vh;
-      }
-    #container{
-        width: 500px ;
+    #result{
+        text-align: center;
     }
-    #details{
-        width: 80%;
-        margin: auto;
-    }
-    
 }
-@media only screen and (min-width: 800px){
-    body{
-      height: 100vh;
-      }
-    #container{
-        width: 600px;
-    }
+.result p{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    padding-top: 1em;
+}
 
+.result {
+  height: auto;
+  width: 100%;
+  margin: 1em auto 0em;
+  background-color: #457b9d;
+  opacity: 0.8;
+  border-radius: 2px;
 }
+/* @media only screen and (min-width: 600px){
+        body{
+        height: 100vh;
+        }
+        #container{
+            width: 500px ;
+        }
+        #details{
+            width: 80%;
+            margin: auto;
+        }
+        
+    }
+    @media only screen and (min-width: 800px){
+        body{
+        height: 100vh;
+        }
+        #container{
+            width: 600px;
+        }
+
+    } */
